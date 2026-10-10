@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
+  background: #f1f5f9; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #0f172a;
+}
+.card { width: min(520px, 94vw); margin: 40px 0; background: #fff; padding: 24px; border-radius: 14px; box-shadow: 0 6px 24px rgba(15, 23, 42, .08); }
+h1 { margin: 0 0 12px; font-size: 1.6rem; color: #1d4ed8; }
+form { display: flex; flex-direction: column; gap: 10px; }
+.row { flex-direction: row; }
+input, select, button { font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid #cbd5e1; }
+input { flex: 1; min-width: 0; }
+button { cursor: pointer; background: #1d4ed8; color: #fff; border: none; }
+button:hover { background: #1e40af; }
+button.link { background: none; color: #1d4ed8; padding: 4px; }
+button.link:hover { text-decoration: underline; background: none; }
+.muted { color: #64748b; font-size: .9rem; margin: 0; }
+.error { color: #dc2626; min-height: 1.2em; font-size: .9rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.filters { display: flex; gap: 8px; margin: 14px 0 8px; }
+.filters button { background: #e2e8f0; color: #0f172a; padding: 6px 12px; }
+.filters button.active { background: #1d4ed8; color: #fff; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid #e2e8f0; }
+li .title { flex: 1; word-break: break-word; }
+li.done .title { text-decoration: line-through; color: #94a3b8; }
+.badge { font-size: .72rem; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; }
+.badge.high { background: #fee2e2; color: #b91c1c; }
+.badge.medium { background: #fef3c7; color: #b45309; }
+.badge.low { background: #dcfce7; color: #15803d; }
+li .del { background: none; color: #dc2626; padding: 4px 8px; }
+li .del:hover { background: #fee2e2; }
+.empty { text-align: center; color: #94a3b8; padding: 20px 0; }

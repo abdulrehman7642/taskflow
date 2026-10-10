@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>TaskFlow</h1>
+
+    <!-- Auth view -->
+    <section id="auth-view">
+      <p class="muted" id="auth-mode-text">Log in to see your tasks</p>
+      <form id="auth-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password (min 6 characters)" required />
+        <button type="submit" id="auth-submit">Log in</button>
+      </form>
+      <p class="error" id="auth-error"></p>
+      <button class="link" id="toggle-mode">No account? Register</button>
+    </section>
+
+    <!-- App view -->
+    <section id="app-view" hidden>
+      <div class="topbar">
+        <span class="muted" id="count"></span>
+        <button class="link" id="logout">Log out</button>
+      </div>
+      <form id="task-form" class="row">
+        <input type="text" id="title" placeholder="New task..." maxlength="200" required />
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="done">Done</button>
+      </div>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
